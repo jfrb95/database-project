@@ -13,7 +13,6 @@ exports.getUsernames = async function(req, res) {
   const searchTerm = req.query.search;
 
   if (searchTerm === '') {
-    console.log("nice2");
     return res.redirect('/');
   } 
 
@@ -33,6 +32,6 @@ exports.postNewUser = async function(req, res) {
 };
 
 exports.deleteAllUsers = async function(req, res) {
-  db.clearUsernames();
+  await db.clearUsernames();
   res.redirect("/");
 }
