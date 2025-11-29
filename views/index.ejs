@@ -6,6 +6,17 @@
   <title>Document</title>
 </head>
 <body>
-  
+
+  <form action="/" method="GET">
+    <label>
+      Search
+      <input type="text" name="search" id="search">
+      <button type="submit">Search</button>
+    </label>
+  </form>
+
+  <% usernames.forEach((usernameObj) => { %>
+    <p><%= usernameObj.username %></p>
+  <% }); %>
 </body>
 </html>
